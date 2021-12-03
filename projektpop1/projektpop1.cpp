@@ -96,9 +96,10 @@ void ruch(char t[], char& symbol, char nick1[], char nick2[], bool nastepny)
 
         r = atoi(r1);
 
-        if (strcmp(r1, "help") == 0) cout << "Wybierz liczbe 1-36";
+        if (strcmp(r1, "help") == 0) cout << "Wybierz liczbe z przedzialu 1-36" << endl;
         cout << "-----------------------\n\n";
 
+        system("cls");
 
         if ((r >= 1) && (r <= 36) && (t[r] == ' ') && !(t[r] == symb1) && !(t[r] == symb2)) {                //czy pole jest wolne 
 
@@ -112,21 +113,19 @@ void ruch(char t[], char& symbol, char nick1[], char nick2[], bool nastepny)
                 nick = nick1;
                 cout << "else1" << endl;
             }
+
             runda++;
             nastepny = true;
             t[r] = symbol;
-            cout << "Wolne miejsce" << endl;;
+            cout << "Wolne miejsce" << endl;
         }
         else {
-            cout << "Straciles ruch" << endl;
+            cout << "Te pole jest juz zajete, popraw swoj ruch!!!" << endl;
             nastepny = false;
         }
 
         cout << "nr rundy: " << runda << endl;
     }
-
-    system("cls");
-
 }
 
 
@@ -153,5 +152,6 @@ int main()
         cout << "Jeszcze raz ? (T = TAK) : ";
         cin >> w;
         cout << "\n\n\n";
+
     } while ((w == 'T') || (w == 't'));
 }
