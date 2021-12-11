@@ -12,7 +12,6 @@ void plansza(char* t) {
         {
             cout << "║ " << t[i] << " ";
 
-
             if (i % 6)
                 cout << "";
 
@@ -184,7 +183,7 @@ void ruch(char* t, char& symbol, char nick1[], char nick2[], bool nastepny, char
             symbol = symb2;
         }
 
-        cout << "\n Tura gracza " << nick << " symol: " << symbol << " Twoj ruch : ";
+        cout << "\n Tura gracza " << nick << " symbol: " << symbol << " Twoj ruch : ";
         cin >> r1;
         r = cwiartkanaidx(r1[0], r1[1]);
 
@@ -232,8 +231,8 @@ int main()
     cout << "Podaj nick gracza 2: ";
     cin >> nick2;
     cout << endl << endl;
-    cout << "Wybierz 1 zeby zagrac w kolko i krzyzyk" << endl;
-    cout << "Wybierz h zeby zobazcyc instrukcje" << endl;
+    cout << "Wybierz '1' zeby zagrac w kolko i krzyzyk" << endl;
+    cout << "Wybierz 'h' zeby zobazcyc instrukcje" << endl;
     cout << "Wybierz 'm' zeby odpalic menu (podczas gry)" << endl;
     char menu;
     cin >> menu;
@@ -243,10 +242,10 @@ int main()
     while (1) {
         switch (menu) {
         case 'm':
-            cout << "Wybierz 1 zeby kontynuowac gre" << endl;
-            cout << "Wybierz h zeby zobaczyc instrukcje" << endl;
-            cout << "Wybierz 3 zeby zmienic zetony" << endl;
-            cout << "Wybierz 4 zeby zagrac w nowa gre kolko i krzyz" << endl;
+            cout << "Wybierz '1' zeby kontynuowac gre" << endl;
+            cout << "Wybierz 'h' zeby zobaczyc instrukcje" << endl;
+            cout << "Wybierz '3' zeby zmienic zetony" << endl;
+            cout << "Wybierz '4' zeby zagrac w nowa gre kolko i krzyzyk" << endl;
             cout << "wybierz 'o' zeby odpalic uzupelniona plansze" << endl;
             cin >> menu;
             break;
